@@ -1,4 +1,5 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -8,9 +9,9 @@ int main(void)
 
     for (int i = 0, n = strlen(name); i < n; i++)
     {
-        if (name[i] >= 'a' && name[i] <= 'z')
+        if (islower(name[i]))
         {
-            printf("%c", name[i] - 32);
+            printf("%c", toupper(name[i]));  // convert to each character -- so %c
         }
         else
         {
