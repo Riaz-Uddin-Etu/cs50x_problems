@@ -3,12 +3,15 @@
 
 int main(int argc, string argv[])
 {
-    if (argc == 3)
+    for (int i = 0; i < argc; i++)
     {
-        printf("Hello, %s %s %s\n", argv[0], argv[1], argv[2]);
+        printf("%s ", argv[i]);
     }
-    else
-    {
-        printf("Hello, world\n");
-    }
+    printf("\n");
 }
+
+
+/*
+argc, the number of command line arguments
+argv, which is an array of the characters passed as arguments at the command line.
+*/
